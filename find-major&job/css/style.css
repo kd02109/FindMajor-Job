@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Grape+Nuts&family=Open+Sans:wght@400;600&display=swap');
+@import "reset.css";
+
+/*components*/
+@import "components/header.css";
+@import "components/explation.css";
+@import "components/file-upload.css";
+@import "components/button.css";
+@import "components/predict.css";
+@import "components/loadinganimation.css";
+@import "components/popup.css";
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F0F1F3;
+    height: 100vh;
+}

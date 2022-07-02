@@ -1,0 +1,31 @@
+.status-bar{
+    display: flex;
+	justify-content: space-between;
+    padding: 20px 80px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: skyblue;
+	opacity: 0.8;
+}
+.status-bar__box{
+    width:33%;
+}
+.status-bar__box1{
+    /*justify-content: flex-start;*/
+	width: fit-content;
+	font-weight:600;
+}
+.status-bar__box2{
+    /*justify-content: flex-start;*/
+	width: fit-content;
+	font-weight:600;
+}
+
+.status-bar__box:last-child{
+    /*display: flex;
+    justify-content: flex-end;*/
+    /*margin-left: 10%;*/
+}

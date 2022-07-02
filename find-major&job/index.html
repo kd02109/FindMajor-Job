@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            size="16x16 32x32 64x64"
+            href="https://insightsg.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fde01d9e0-5ea3-4071-a42f-6568f34c0c92%2FKakaoTalk_20220225_215720987.png?table=block&id=852e4399-e399-4663-9a67-c08085398f40&spaceId=8d7ae215-ed29-46ba-88cb-25d0d6cd52f9&width=2000&userId=&cache=v2"
+        />
+        <meta name="AI 전공 예측??" content="당신의 전공을 에측해보세요!" />
+        <link rel="stylesheet" , href="css/style.css" />
+        <title>Insight Backend Project - major</title>
+		
+		<!-- 공유기능 -->
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62baff90adea116a"></script>
+	</head>
+    <body>
+        <div class="status-bar">
+            <div class="status-bar__box1">
+                <span class="status-bar__txt">What's my major?</span>
+            </div>
+            <div class="status-bar__box2">
+				<a href="jop-page.html">
+					<button id="moveto_other_model">나는 무슨 직업상일까?</button>
+				</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-sentence">
+				<h1 class="question">당신과 어울리는 전공은<i class="fa-solid fa-circle-question question-mark"></i></h1>
+				<div id="popup" class="content-popup hidden">
+					<p>
+						안녕하세요. 만나서 반갑습니다.
+					</p>
+				</div>
+			</div>
+            <h3 class="content-explanation" style="text-align: center">
+                얼굴 정면사진을 업로드해주세요.<br>(업로드한 사진은 분석에만 이용되며, 저장하지
+                않습니다.)
+            </h3>
+        </div>
+
+		
+        <div class="file-upload">
+            <div class="image-upload-wrap">
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <h3>얼굴 사진을 올려놓거나 눌러서 업로드 하세요!</h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="input-image" src="#" alt="your image" />
+				<div id="loading" class="animated bounce" style="display: none;">
+            		<div class="spinner-border" role="status">
+                		<span class="sr-only">Loading...</span>
+						<div class="animation">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+            		</div>
+            		<p class="text-center">AI가 당신의 학과를 분석중입니다.</p>
+        		</div>
+				
+				<div id="webcam-container"></div>
+        		<div id="label-container"></div>
+                <div class="image-title-wrap">
+					<button type="button p-2" class="try-again-btn" onclick="gaReload()">
+                    	<span class="try-again-text">Retry with another photo</span>
+                	</button>
+                </div>
+				<br>
+				<br>
+				<!-- 공유기능 -->
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_inline_share_toolbox_1hhj"></div>
+            </div>
+        </div>
+		<script src="https://kit.fontawesome.com/981361981b.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript"></script>
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <script src="js/app.js"></script>
+        <script src="js/model.js"></script>
+		 <script src="js/popup.js"></script>
+		<script scr="js/share_kakao.js" charset="utf-8"></script>
+    </body>
+</html>

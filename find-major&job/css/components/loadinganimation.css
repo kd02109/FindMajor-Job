@@ -1,0 +1,31 @@
+.animation span{
+	width: 20px;
+	height: 20px;
+	background-color:tomato;
+	display: inline-block;
+	border-radius:50%;
+	animation: loading 1s linear infinite;
+}
+
+.animation span:first-child{
+	animation-delay:0s;
+	background-color: rbg(4,71,4);
+}
+.animation span:nth-child(2){
+	animation-delay:0.2s;
+	background-color: rbg(24,180,24);
+}
+.animation span:last-child{
+	animation-delay:0.4;
+	background-color: rbg(174,236,174);
+}
+
+@keyframes loading{
+	0%{opacity: 0; transform: scale(0.5);}
+	50%{opacity: 1; transform: scale(1.2);}
+	100%{opacity: 0; transform: scale(0.5);}
+}
+
+.animation{
+	margin-bottom:30px;
+}
